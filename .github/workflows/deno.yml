@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   test:
-    name: Deno test 
+    name: Deno Test
     runs-on: ubuntu-latest
     env:
       deno-version: v1.x
