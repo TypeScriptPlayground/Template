@@ -1,5 +1,8 @@
 {
     "tasks": {
         "index": "deno run --check -A ./src/index.ts"
-    }
+    },
+    "exclude": [
+        "*.test.ts"
+    ]
 }
