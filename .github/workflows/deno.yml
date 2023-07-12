@@ -13,16 +13,16 @@ jobs:
   test:
     runs-on: ubuntu-latest
     env:
-      deno_version: v1.x
+      deno-version: v1.x
 
     steps:
       - name: Setup Repository (${{github.event.repository.name}})
         uses: actions/checkout@v3
 
-      - name: Setup Deno ${{env.deno_version}}
+      - name: Setup Deno (${{env.deno-version}})
         uses: denoland/setup-deno@v1
         with:
-          deno-version: ${{env.deno_version}}
+          deno-version: ${{env.deno-version}}
 
       - name: Run linter
         run: deno lint
