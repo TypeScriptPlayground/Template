@@ -1,5 +1,5 @@
 {
     "tasks": {
-        "run": "deno run --check -A index.ts"
+        "run": "deno run --check -A ./src/index.ts"
     }
 }
