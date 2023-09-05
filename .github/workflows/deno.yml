@@ -29,4 +29,10 @@ jobs:
         run: deno lint
 
       - name: Run tests
-        run: deno test -A --unstable --check --reload --doc --allow-none
+        if: success() || failure()
+        run: deno test -A --unstable --check --reload --doc --allow-none --junit-path="./report.xml"
+                         
+      - name: Report test      
+        uses: mikepenz/action-junit-report@v3.8.0
+        with:
+          report_paths: 'report.xml'
